@@ -8,7 +8,7 @@
   padding: 0 0.9375rem;
 }
 
-.guitars__image::before,
+.guitars__image-ibg::before,
 [class*=_icon-]:before,
 [class*=_icon-] :after {
   font-family: "icons";
@@ -190,14 +190,14 @@ h6 {
 
 /*--------------------*/
 
-.ibg {
+[class*=-ibg] {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 
-.ibg img {
+[class*=-ibg] img {
   width: 0;
   height: 0;
   position: absolute;
@@ -326,6 +326,17 @@ h6 {
 
 .footer__body:not(:last-child) {
   margin-bottom: calc(10px + 70 * ((100vw - 320px) / (1440 - 320)));
+}
+
+.footer__copyright {
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  line-height: 1.6;
+  color: rgba(18, 18, 18, 0.6);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .body-footer {
@@ -534,17 +545,6 @@ h6 {
   font-size: 1.375rem;
 }
 
-.body-footer__copyright {
-  font-size: 1rem;
-  display: block;
-  text-align: center;
-  line-height: 1.6;
-  color: rgba(18, 18, 18, 0.6);
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
-}
-
 body {
   font-family: Poppins, sans-serif;
   font-weight: 400;
@@ -609,11 +609,11 @@ body {
   padding-top: 235px;
 }
 
-.guitars__image {
+.guitars__image-ibg {
   position: relative;
 }
 
-.guitars__image::before {
+.guitars__image-ibg::before {
   content: "\e903";
   position: absolute;
   display: -webkit-box;
@@ -863,7 +863,7 @@ body {
   border-radius: 1.25rem;
 }
 
-.row-categories__item-image {
+.row-categories__item-image-ibg {
   -webkit-transition: all 0.5s ease 0s;
   -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
@@ -1271,7 +1271,7 @@ body {
             justify-content: flex-start;
   }
 
-  .body-buy__image {
+  .body-buy__image-ibg {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 47.3333333333%;
             flex: 0 0 47.3333333333%;
@@ -1305,7 +1305,7 @@ body {
     display: flex;
   }
 
-  .guitars__image {
+  .guitars__image-ibg {
     -webkit-transform: translate(-100%, 0);
         -ms-transform: translate(-100%, 0);
             transform: translate(-100%, 0);
@@ -1404,13 +1404,13 @@ body {
 			);
   }
 
-  .guitars__image::before {
+  .guitars__image-ibg::before {
     width: calc(
 				50px + 30 * ((100vw - 320px) / (1200 - 320))
 			);
   }
 
-  .guitars__image::before {
+  .guitars__image-ibg::before {
     height: calc(
 				50px + 30 * ((100vw - 320px) / (1200 - 320))
 			);
@@ -1643,7 +1643,7 @@ body {
     padding-top: calc(50px + 60 * ((100vw - 320px) / (1440 - 320)));
   }
 
-  .guitars__image {
+  .guitars__image-ibg {
     position: absolute;
     top: 0;
     left: 0;
@@ -1653,7 +1653,7 @@ body {
     opacity: 0.9;
   }
 
-  .guitars__image::before {
+  .guitars__image-ibg::before {
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1843,7 +1843,7 @@ body {
     text-align: center;
   }
 
-  .body-buy__image {
+  .body-buy__image-ibg {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -1853,7 +1853,7 @@ body {
     z-index: -1;
   }
 
-  .body-buy__image.ibg {
+  .body-buy__image-ibg.ibg {
     background-size: contain;
   }
 }
@@ -1954,7 +1954,7 @@ body {
     border-radius: 0rem;
   }
 
-  .row-categories__item-image {
+  .row-categories__item-image-ibg {
     padding: 0 0 50% 0;
     border-radius: 0rem;
   }
@@ -2079,6 +2079,11 @@ body {
             filter: drop-shadow(0 0 0.625rem rgb(255, 100, 40));
   }
 
+  .footer__copyright:hover {
+    color: #121212;
+    text-shadow: 0.03125rem 0.0625rem 0rem rgba(0, 0, 0, 0.45);
+  }
+
   .body-footer__address-link:hover {
     text-shadow: 0.03125rem 0.0625rem 0rem rgba(0, 0, 0, 0.45);
   }
@@ -2116,11 +2121,6 @@ body {
   }
 
   .body-footer__follow-link:hover {
-    color: #121212;
-    text-shadow: 0.03125rem 0.0625rem 0rem rgba(0, 0, 0, 0.45);
-  }
-
-  .body-footer__copyright:hover {
     color: #121212;
     text-shadow: 0.03125rem 0.0625rem 0rem rgba(0, 0, 0, 0.45);
   }
